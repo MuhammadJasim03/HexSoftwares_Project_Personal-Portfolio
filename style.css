@@ -97,6 +97,7 @@ h1{
   }
   .nav-links.show {
   display: flex;
+  background-color: black;
 }
 
   .nav-links a {
