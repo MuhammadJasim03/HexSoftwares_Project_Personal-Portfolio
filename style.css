@@ -95,6 +95,9 @@ h1{
     padding: 15px;
     border-radius: 10px;
   }
+  .nav-links.show {
+  display: flex;
+}
 
   .nav-links a {
     margin: 10px 0;
