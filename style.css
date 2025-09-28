@@ -13,99 +13,102 @@ h1{
 }
 
         /* Navbar Section */
-/* Navbar Container */
+/* Navbar */
 .navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 10%;
-  position: sticky;
-  top: 0;
+  padding: 12px 25px;
   z-index: 1000;
 }
 
-/* Logo Section */
+/* Logo */
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
-/* Circle MJ */
 .circle {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   background: gold;
-  color: #000;
+  color: #111;
   border-radius: 50%;
   font-weight: 700;
-  font-size: 1.2rem;
   display: flex;
-  align-items: center;
   justify-content: center;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.7),
-              0 0 25px rgba(255, 215, 0, 0.5);
+  align-items: center;
 }
 
-/* Name */
 .name {
-  font-size: 1.3rem;
+  color: #fff;
+  font-size: 1.2rem;
   font-weight: 600;
-  color: gold;
-  letter-spacing: 1px;
 }
 
 /* Links */
-.navbar a {
-  margin-left: 25px;
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.05rem;
-  font-weight: 500;
-  transition: 0.3s ease;
-  position: relative;
+.nav-links {
+  display: flex;
+  gap: 100px;
 }
 
-/* Hover Effect */
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
 
 .navbar a:hover {
   color: gold;
 }
 
-.navbar a:hover::after {
-  width: 100%;
+/* Let's Talk button */
+.talk {
+  padding: 3px 14px;
+  border: 1px solid gold;
+  border-radius: 5px;
 }
 
-/* "Let's Talk" Button */
-.navbar .talk {
-  padding: 8px 18px;
-  background: gold;
-  color: #000;
-  border-radius: 8px;
-  font-weight: 600;
-  margin-left: 35px;
-  box-shadow: 0 0 12px rgba(255, 215, 0, 0.7),
-              0 0 25px rgba(255, 215, 0, 0.5);
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
 }
 
-.navbar .talk:hover {
-  background: #ffd700;
-  color: black;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.9),
-              0 0 40px rgba(255, 215, 0, 0.7);
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .navbar {
+/* Mobile view */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
     flex-direction: column;
-    padding: 15px 5%;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
   }
 
-  .navbar a {
+  .nav-links a {
     margin: 10px 0;
   }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
 }
+
 
 
                /* Hero section */
